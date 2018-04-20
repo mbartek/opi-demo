@@ -25,4 +25,19 @@ public class LoginTests extends TestBase {
     }
 
 
+    @Test
+    public void asUserTryToLoginBadCredentails2() {
+        DriverUtils.navigateTo(LOGIN_URL);
+
+        LoginPage loginPage = new LoginPage();
+        String badPassword = loginPage
+                .typeIntoEmailField("nudafixoj@mailtrix.net")
+                .typeIntoPasswordField("")
+                .clickOnSignInButton()
+                .getWarningText();
+
+        assertEquals(badPassword, "Invalid email address.");
+    }
+
+
 }
