@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OPI Tests example" verbose="3" parallel="tests" thread-count="2" group-by-instances="true">
+    <test name="Search Tests" group-by-instances="true">
+        <classes>
+            <class name="org.opi.tests.SearchTests"/>
+        </classes>
+    </test>
+    <test name="Login Tests">
+        <classes>
+            <class name="org.opi.tests.LoginTests"/>
+        </classes>
+    </test>
+</suite>
